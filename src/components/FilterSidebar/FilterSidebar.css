@@ -1,0 +1,151 @@
+.filter-sidebar {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: fit-content;
+    position: sticky;
+    top: calc(var(--navbar-height) + 1.5rem);
+}
+
+.filter-sidebar__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter-sidebar__header h3 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.filter-sidebar__clear {
+    font-size: 0.78rem;
+    color: var(--accent);
+    background: none;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 255, 135, 0.3);
+    transition: var(--transition);
+}
+
+.filter-sidebar__clear:hover {
+    background: var(--accent-dim);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.filter-group__title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.filter-group__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.filter-group__items--compact {
+    gap: 0.35rem;
+}
+
+.filter-chip {
+    padding: 0.35rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background: var(--bg-glass);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.filter-chip:hover {
+    border-color: var(--border-hover);
+    color: var(--text-primary);
+}
+
+.filter-chip.active {
+    background: var(--accent-dim);
+    border-color: rgba(0, 255, 135, 0.5);
+    color: var(--accent);
+}
+
+.filter-chip--size {
+    min-width: 40px;
+    text-align: center;
+}
+
+/* Teams checkboxes */
+.filter-group__teams {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    max-height: 280px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.filter-team {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.4rem 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-team:hover {
+    background: var(--bg-glass);
+}
+
+.filter-team input {
+    display: none;
+}
+
+.filter-team__check {
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid var(--border);
+    border-radius: 4px;
+    flex-shrink: 0;
+    transition: var(--transition);
+    position: relative;
+}
+
+.filter-team input:checked+.filter-team__check {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.filter-team input:checked+.filter-team__check::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: #000;
+}
+
+.filter-team__emoji {
+    font-size: 0.9rem;
+}
+
+.filter-team__name {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
