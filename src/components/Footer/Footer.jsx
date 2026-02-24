@@ -13,7 +13,7 @@ const Footer = () => {
                         As melhores camisas de futebol do Brasil e do mundo.
                     </p>
                     <div className="footer__socials">
-                        <a href="#" className="footer__social" aria-label="Instagram">📸</a>
+                        <a href="https://www.instagram.com/monkydrops/" target="_blank" rel="noopener noreferrer" className="footer__social" aria-label="Instagram">📸</a>
                         <a href="#" className="footer__social" aria-label="Twitter">🐦</a>
                         <a href="#" className="footer__social" aria-label="TikTok">🎵</a>
                     </div>
