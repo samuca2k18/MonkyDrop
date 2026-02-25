@@ -25,39 +25,41 @@ const Home = ({ favoriteTeam }) => {
             {/* Hero */}
             <section className="hero">
                 <div className="hero__bg" />
-                <div className="container hero__content">
-                    <div className="hero__badge badge badge-accent">⚽ Nova Coleção 2024/25</div>
-                    <h1 className="hero__title">
-                        Vista a Camisa
-                        <br />
-                        <span className="hero__title-accent">do seu Time</span>
-                    </h1>
-                    <p className="hero__desc">
-                        Camisas oficiais dos melhores times do Brasil e do mundo. Qualidade garantida, entrega rápida.
-                    </p>
-                    <div className="hero__actions">
-                        <Link to="/shop" className="btn btn-primary hero__cta" id="hero-shop-btn">
-                            Ver Coleção
-                        </Link>
-                        <Link to="/shop?filter=new" className="btn btn-outline">
-                            Lançamentos
-                        </Link>
+                <div className="container hero__inner">
+                    <div className="hero__content">
+                        <div className="hero__badge badge badge-accent">⚽ Nova Coleção 2024/25</div>
+                        <h1 className="hero__title">
+                            Vista a Camisa
+                            <br />
+                            <span className="hero__title-accent">do seu Time</span>
+                        </h1>
+                        <div className="hero__actions">
+                            <Link to="/shop" className="btn btn-primary hero__cta" id="hero-shop-btn">
+                                Ver Coleção
+                            </Link>
+                            <Link to="/shop?filter=new" className="btn btn-outline">
+                                Laçamentos
+                            </Link>
+                        </div>
+                        <div className="hero__stats">
+                            <div className="hero__stat">
+                                <span className="hero__stat-value">+20</span>
+                                <span className="hero__stat-label">Times</span>
+                            </div>
+                            <div className="hero__stat-divider" />
+                            <div className="hero__stat">
+                                <span className="hero__stat-value">100%</span>
+                                <span className="hero__stat-label">Original</span>
+                            </div>
+                            <div className="hero__stat-divider" />
+                            <div className="hero__stat">
+                                <span className="hero__stat-value">4.8★</span>
+                                <span className="hero__stat-label">Avaliação</span>
+                            </div>
+                        </div>
                     </div>
-                    <div className="hero__stats">
-                        <div className="hero__stat">
-                            <span className="hero__stat-value">+20</span>
-                            <span className="hero__stat-label">Times</span>
-                        </div>
-                        <div className="hero__stat-divider" />
-                        <div className="hero__stat">
-                            <span className="hero__stat-value">100%</span>
-                            <span className="hero__stat-label">Original</span>
-                        </div>
-                        <div className="hero__stat-divider" />
-                        <div className="hero__stat">
-                            <span className="hero__stat-value">4.8★</span>
-                            <span className="hero__stat-label">Avaliação</span>
-                        </div>
+                    <div className="hero__image-wrap">
+                        <img src="/monky-ball.png" alt="MonkyDrop" className="hero__image" />
                     </div>
                 </div>
                 <div className="hero__scroll-hint">
