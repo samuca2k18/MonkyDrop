@@ -26,7 +26,7 @@ const Navbar = () => {
             <div className="container navbar__inner">
                 {/* Logo */}
                 <Link to="/" className="navbar__logo">
-                    <span className="navbar__logo-icon">⚽</span>
+                    <img src="/monky.png" alt="MonkyDrop" className="navbar__logo-img" />
                     <span className="navbar__logo-text">
                         monky<span className="navbar__logo-accent">drop</span>
                     </span>

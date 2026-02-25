@@ -4,6 +4,7 @@ import { featuredProducts, products } from "../../data/products";
 import { leagues } from "../../data/teams";
 import "./Home.css";
 
+
 const teamCategories = [
     { name: "Flamengo", emoji: "🔴⚫", country: "Brasil" },
     { name: "Barcelona", emoji: "🔴🔵", country: "Espanha" },
@@ -13,8 +14,11 @@ const teamCategories = [
     { name: "Palmeiras", emoji: "🟢", country: "Brasil" },
 ];
 
-const Home = () => {
+const Home = ({ favoriteTeam }) => {
     const newArrivals = products.filter((p) => p.isNew).slice(0, 4);
+    const favoriteProducts = favoriteTeam
+        ? products.filter((p) => p.team === favoriteTeam).slice(0, 4)
+        : [];
 
     return (
         <main className="home page-wrapper">
@@ -74,6 +78,29 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Favorite Team Section */}
+            {favoriteTeam && favoriteProducts.length > 0 && (
+                <section className="section" style={{ background: "var(--accent-dim)", padding: "2.5rem 0", borderTop: "2px solid var(--border-hover)", borderBottom: "2px solid var(--border-hover)" }}>
+                    <div className="container">
+                        <div className="section-header">
+                            <div>
+                                <div className="divider" />
+                                <h2 className="section-title">⭐ Seu Time: {favoriteTeam}</h2>
+                                <p className="section-subtitle">As melhores camisas do seu coração</p>
+                            </div>
+                            <Link to={`/shop?team=${favoriteTeam}`} className="btn btn-primary">Ver todas →</Link>
+                        </div>
+                        <div className="product-grid">
+                            {favoriteProducts.map((p, i) => (
+                                <div key={p.id} className="fade-in-up" style={{ animationDelay: `${i * 0.08}s` }}>
+                                    <ProductCard product={p} />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
 
             {/* Featured */}
             <section className="section">

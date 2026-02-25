@@ -23,6 +23,8 @@ export const teams = [
 
 export const leagues = [
     { id: "brasileirao", name: "Brasileirão", flag: "🇧🇷" },
+    { id: "serie-b", name: "Brasileirão Série B", flag: "🇧🇷" },
+    { id: "retro", name: "Retro", flag: "🕹️" },
     { id: "la-liga", name: "La Liga", flag: "🇪🇸" },
     { id: "premier-league", name: "Premier League", flag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿" },
     { id: "ligue-1", name: "Ligue 1", flag: "🇫🇷" },
